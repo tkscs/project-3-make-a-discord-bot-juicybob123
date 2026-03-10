@@ -99,8 +99,8 @@ you start with {balance}
   elif "balance" in f"{user_message}":
     return f'''{balance}
     '''
-  elif "lolipop" in f"{user_message,user_name}" and user_name == player and BJ_started == True :
-    number = user_message[14:]
+  elif "input" in f"{user_message,user_name}" and user_name == player and BJ_started == True :
+    number = user_message[12:]
     number = int(number)
     if number > balance:
        return ''' you are broke 
@@ -152,7 +152,7 @@ dealer got {dealer_card}
       '''
       elif dealer_total_card > 17 and dealer_total_card < your_card_total:
         
-        balance =+ number * 2
+        balance = balance + number * 2
         number = 0
         return f''' dealer rolled a {dealer_total_card} and did not reach players number
         your new balance is {balance}
